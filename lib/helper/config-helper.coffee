@@ -41,18 +41,19 @@ module.exports = ConfigHelper =
 
   sample:
     remote:
-      host: "HOSTNAME",
-      user: "USERNAME",
-      path: "REMOTE_DIR"
+      host: "HOST_NICKNAME"  # The remote host name for rsync
+      user: "USER"           # username on the remote host
+      path: "TARGET_ROOT"    # path to the folder with which to sync
     behaviour:
-      uploadOnSave: true
-      syncDownOnOpen: true
-      forgetConsole: false
-      autoHideConsole: true
-      alwaysSyncAll: false
+      uploadOnSave: true     # Set to upload automatically on save.
+      syncDownOnOpen: true   # Set to rsync remote -> local on opening files
+      forgetConsole: false   # Set to not use the console.
+      autoHideConsole: true  # Set to auto-hide the console
+      alwaysSyncAll: false   # Set to always rsync the whole project folder
     option:
-      deleteFiles: false
-      exclude: [
+      deleteFiles: false     # Set to delete files on "Sync Local->Remote"
+      autoHideDelay: 5000    # Parameter (msec) to control console display time
+      exclude: [             # Put your files/folders for rsync to ignore here
         '.sync-config.cson'
         '.git'
         'node_modules'
