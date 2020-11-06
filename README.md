@@ -1,12 +1,14 @@
-# atom-sync package
+# atom-rsync package
 
-atom-sync is an Atom package to sync files bidirectionally between remote host and local over ssh+rsync. Inspired by [Sublime SFTP](http://wbond.net/sublime_packages/sftp).
+atom-rsync is an Atom package to sync files bidirectionally between remote host and local over ssh+rsync. Inspired by [Sublime SFTP](http://wbond.net/sublime_packages/sftp).
 
-[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)[![Build Status](https://travis-ci.org/dingjie/atom-sync.svg?branch=master)](https://travis-ci.org/dingjie/atom-sync)
+This Atom package is a fork of the [atom-rsync](https://github.com/dingjie/atom-rsync) package, which was abandoned around 2017 by the original author.  This package picks up and applies the [pull request #76](https://github.com/dingjie/atom-rsync/pull/76) from the original repo.
 
-> This package is currently in early development and has only been tested on Mac. Please kindly [try it out](http://atom.io/packages/atom-sync) and [provide feedback](https://github.com/dingjie/atom-sync/issues/new).
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)[![Build Status](https://travis-ci.org/dingjie/atom-rsync.svg?branch=master)](https://travis-ci.org/dingjie/atom-rsync)
 
-![atom-sync](https://cloud.githubusercontent.com/assets/586262/8085519/2b63a7c4-0fc3-11e5-930a-685b09fe7af3.gif)
+> This package is currently in early development and has only been tested on Mac. Please kindly [try it out](http://atom.io/packages/atom-rsync) and [provide feedback](https://github.com/dingjie/atom-rsync/issues/new).
+
+![atom-rsync](https://cloud.githubusercontent.com/assets/586262/8085519/2b63a7c4-0fc3-11e5-930a-685b09fe7af3.gif)
 
 ### Feature ###
 * Sync over ssh+rsync — still [secure](http://www.sakana.fr/blog/2008/05/07/securing-automated-rsync-over-ssh/), but much [faster](http://stackoverflow.com/questions/20244585/what-is-the-difference-between-scp-and-rsync).

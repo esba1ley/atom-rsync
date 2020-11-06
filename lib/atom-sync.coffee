@@ -13,29 +13,29 @@ module.exports = AtomSync =
 
     # Bind commands
 
-    # @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:debug': (e) =>
+    # @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:debug': (e) =>
     #   @controller.debug @getProjectPath atom.workspace.getActivePaneItem().buffer.file.path
 
-    @subscriptions.add atom.commands.add '.tree-view.full-menu .header.list-item', 'atom-sync:configure': (e) =>
+    @subscriptions.add atom.commands.add '.entries.list-tree .header.list-item, .header.list-item.project-root-header', 'atom-rsync:configure': (e) =>
       @controller.onCreate @getSelectedPath e.target
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:upload-project': (e) =>
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:upload-project': (e) =>
       projectFolder = @getProjectPath atom.workspace.getActivePaneItem().buffer.file.path
       @controller.onSync projectFolder, 'up' if projectFolder
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:download-directory': (e) =>
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:download-directory': (e) =>
       @controller.onSync (@getSelectedPath e.target, yes), 'down'
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:upload-directory': (e) =>
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:upload-directory': (e) =>
       @controller.onSync (@getSelectedPath e.target, yes), 'up'
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:download-file': (e) =>
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:download-file': (e) =>
       @controller.onSync (@getSelectedPath e.target), 'down'
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:upload-file': (e) =>
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:upload-file': (e) =>
       @controller.onSync (@getSelectedPath e.target), 'up'
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-sync:toggle-log-panel': (e) =>
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-rsync:toggle-log-panel': (e) =>
       @controller.toggleConsole()
 
     # Observe events

@@ -8,10 +8,10 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 # 'atom-workspace':
-#   'ctrl-alt-o': 'atom-sync:toggle'
+#   'ctrl-alt-o': 'atom-rsync:toggle'
 
 '.platform-darwin atom-workspace':
-    'cmd-alt-l': 'atom-sync:toggle-log-panel'
+    'cmd-alt-l': 'atom-rsync:toggle-log-panel'
 
 '.platform-win32 atom-workspace, .platform-linux atom-workspace':
-    'ctrl-alt-l': 'atom-sync:toggle-log-panel'
+    'ctrl-alt-l': 'atom-rsync:toggle-log-panel'

@@ -3,7 +3,7 @@
 module.exports =
 class ConsoleView extends View
   @content: ->
-    @div class: 'atom-sync', =>
+    @div class: 'atom-rsync', =>
       @div class: 'header', "Sync Console", =>
         @div class: 'btn_close', title: 'Close', String.fromCharCode(0xf081)
         @div class: 'btn_empty', title: 'Clear sync log', String.fromCharCode(0xf0d0)

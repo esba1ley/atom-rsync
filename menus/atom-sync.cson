@@ -1,33 +1,32 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
 'context-menu':
-  '.tree-view .header.list-item': [
-    'label': 'Sync'
-    'submenu': [
+  '.entries.list-tree .header.list-item, .header.list-item.project-root-header': [
+    label: 'Sync'
+    submenu: [
       {
-        'label': 'Edit Sync Config'
-        'command': 'atom-sync:configure'
+        label: 'Edit Sync Config'
+        command: 'atom-rsync:configure'
       }
       {
-        'label': 'Sync Remote -> Local'
-        'command': 'atom-sync:download-directory'
+        label: 'Sync Remote -> Local'
+        command: 'atom-rsync:download-directory'
       }
       {
-        'label': 'Sync Local -> Remote'
-        'command': 'atom-sync:upload-directory'
+        label: 'Sync Local -> Remote'
+        command: 'atom-rsync:upload-directory'
       }
     ]
   ]
-
-  '.tree-view .file.list-item': [
-    'label': 'Sync'
-    'submenu': [
+  '.entries.list-tree .file.entry.list-item': [
+    label: 'Sync'
+    submenu: [
       {
-        'label': 'Download File'
-        'command': 'atom-sync:download-file'
+        label: 'Download File'
+        command: 'atom-rsync:download-file'
       }
       {
-        'label': 'Upload File'
-        'command': 'atom-sync:upload-file'
+        label: 'Upload File'
+        command: 'atom-rsync:upload-file'
       }
     ]
   ]
