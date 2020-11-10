@@ -2,7 +2,7 @@
 
 atom-rsync is an Atom package to sync files bidirectionally between remote host and local over ssh+rsync. Inspired by [Sublime SFTP](http://wbond.net/sublime_packages/sftp).
 
-This Atom package is a fork of the [atom-rsync](https://github.com/dingjie/atom-rsync) package, which was abandoned around 2017 by the original author.  This package picks up and applies the [pull request #76](https://github.com/dingjie/atom-rsync/pull/76) from the original repo.
+This Atom package is a fork of the [atom-sync](https://github.com/dingjie/atom-sync) package, which was abandoned around 2017 by the original author.  This package picks up and applies the [pull request #76](https://github.com/dingjie/atom-sync/pull/76) from the original repo.
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)[![Build Status](https://travis-ci.org/dingjie/atom-rsync.svg?branch=master)](https://travis-ci.org/dingjie/atom-rsync)
 
