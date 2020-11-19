@@ -46,17 +46,24 @@ module.exports = ConfigHelper =
       path: "TARGET_ROOT"    # path to the folder with which to sync
     behaviour:
       uploadOnSave: true     # Set to upload automatically on save.
-      syncDownOnOpen: true   # Set to rsync remote -> local on opening files
+      syncDownOnOpen: false   # Set to rsync remote -> local on opening files
       forgetConsole: false   # Set to not use the console.
       autoHideConsole: true  # Set to auto-hide the console
-      alwaysSyncAll: false   # Set to always rsync the whole project folder
+      alwaysSyncAll: true   # Set to always rsync the whole project folder
     option:
-      deleteFiles: false     # Set to delete files on "Sync Local->Remote"
+      deleteFiles: true     # Set to delete files on "Sync Local->Remote"
       autoHideDelay: 5000    # Parameter (msec) to control console display time
       exclude: [             # Put your files/folders for rsync to ignore here
+        '.DS_Store'
         '.sync-config.cson'
+        '.gitattributes'
+        '.gitmodules'
+        '.gitignore'
         '.git'
         'node_modules'
         'tmp'
         'vendor'
       ]
+
+      flags: 'avzu'
+      shell: 'ssh'
